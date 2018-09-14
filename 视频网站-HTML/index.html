@@ -1,0 +1,415 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>首页</title>
+		<link rel="stylesheet" href="css/reset.css" />
+		<style type="text/css">
+			.top-note{border: solid 1px #DCDEDD;padding: 5px 20%;color: #777;font-size: 12px;}
+			.top-note .right>a{cursor: pointer;}
+			.top-note .right>a:hover{color: red;}
+			.search-div{height: 80px;line-height:80px;background: white;padding: 0px 20%;}
+			.search-box{background: white;float: right;}
+			.search-box>input{padding: 9px 8px;border: solid 1px #ccc;outline: 0;border-radius: 2px;}
+			.search-box button{
+				padding: 8px 16px;color: white;background: #337ab7;border: solid #2e6da4 1px;cursor: pointer;
+				position: relative;
+				left: -5px;
+				top: 1px;
+			}
+			.search-box button:active{font-size: 12px;}
+			.search-box:after{content: '';clear: both;display: block;}
+			.nav-bar{background: #14B7B7;padding: 0px 20%;color: white;font-size: 14px;}
+			.nav-bar ul li{float: left;display: block;cursor: pointer;padding: 12px 18px;}
+			.nav-bar ul li:hover{background:#0095bb;}
+			.nav-bar:after{content: '';display: block;clear: both;}
+			.nav-bar .menus{float: left;}
+			.nav-bar .menus:after{content: '';display: block;clear: both;}
+			.nav-bar .login-button{float: right;}
+			.nav-bar .login-button:after{content: '';display: block;clear: both;}
+			.nav-bar ul li.active{background:#0095bb;}
+			.layout-middle{background: #f5f5f5;padding: 0 20%;min-height: 500px;}
+			.kind-box{padding: 10px 0px;}
+			.kind-box>h1{float: left;font-size: 24px;padding-left: 10px;border-left: 8px solid #00A6DE;}
+			.kind-box>a{display:block;float: right;color: red;font-size: 14px;line-height: 31px;}
+			.kind-box:after{content: '';display: block;clear: both;}
+			.film-container{}
+			.film-box:after{content: '';display: block;clear: both;}
+			.film-box{}
+			.films{float: left;background: white;padding: 10px;border-radius: 3px;margin: 0 15px 15px 0;}
+			.films:hover{box-shadow: 0 1px 6px rgba(0,0,0,.2);}
+			.film-box .img-box{width: 125px;height: 165px;padding: 1px;border: solid #ccc 1px;position: relative;}
+			.film-box .img-box>img{width: 100%;height: 100%;cursor: pointer;display: block;}
+			.film-box .img-box>label{background: green;color: white;font-size: 12px;padding: 2px 4px;display: block;position: absolute;right: 1px;bottom: 1px;}
+			
+			
+			.film-describe>p>span:first-child{font-size: 12px;color: gray;}
+			.film-describe>p>span:last-child{font-size: 12px;color: red;font-weight: bold;}
+			.film-describe .title{margin: 5px 0px;}
+			.film-describe .title>a{color: #333;font-size: 14px;}
+			.film-describe .title>a:hover{color: red;}
+			
+			.share-box{border: solid 1px gray;width: 100%;height: 100%;line-height: 35px;color: white;background: black;opacity: 0.1;}
+			.share-box>span{font-size: 12px;}
+			.share-box i{background-image: url(img/share_icons.png);background-repeat: no-repeat;width: 16px;height: 16px;display: inline-block;margin: 0 5px;}
+			.share-box .icon-qq{background-position-y: -52px;}
+			.share-box .icon-wb{background-position-y: -104px;}
+			
+			
+			@media (min-width: 1200px){
+				.s{
+			}
+			
+		</style>
+	</head>
+	<body>
+		<div id="app" class="container">
+			<div class="layout-top">
+				<div class="top-note">
+					<div class="left"><font>欢迎来到Q2电影网，我们因为电影而相聚。记住我们网址:www.q2002.com</font></div>
+					<div class="right">
+						<a>Ctrl+D 加入收藏夹</a>
+						-
+						<a style="color: red;">保存到桌面</a>
+						-
+						<a style="color: rgb(40,96,144);">关注我的微博</a>
+					</div>
+					<div class="clear"></div>
+				</div>
+				<div class="search-div">
+					<div class="search-box">
+						<input placeholder="电影搜索" type="text" />
+						<button>搜索</button>
+					</div>
+					<div class="clear"></div>
+				</div>
+				<div class="nav-bar">
+					<ul class="menus">
+						<li class="active">首页</li>
+						<li>热门电影</li>
+						<li>恐怖午夜剧</li>
+						<li>综艺</li>
+						<li>音乐</li>
+						<li>动漫</li>
+						<li>美图</li>
+						<li>舞曲</li>
+					</ul>
+					
+					<ul class="login-button">
+						<li>注册</li>
+						<li>登陆</li>
+					</ul>
+				</div>
+			</div>			
+			<div class="layout-middle">
+				<div class="film-container">
+					<div class="kind-box">
+						<h1>最新电影：</h1>
+						<a href="#">更多电影>>></a>
+						<div class="clear"></div>
+					</div>
+					<div class="film-box">
+						<div class="films">
+							<div class="img-box">
+								<img src="http://wx4.sinaimg.cn/mw690/80df6fe6gy1fu24e19gypj20ir0rsju0.jpg" />
+								<label>高清中字</label>
+								
+							</div>
+							<div class="film-describe">
+								<h1 class="title"><a href="#">间谍 Goodachri</a></h1>
+								<p><span>添加时间：</span><span>2018-09-14</span></p>
+							</div>
+						</div>
+						<div class="films">
+							<div class="img-box">
+								<img src="http://wx4.sinaimg.cn/mw690/80df6fe6gy1fu24e19gypj20ir0rsju0.jpg" />
+								<label>高清中字</label>
+								
+							</div>
+							<div class="film-describe">
+								<h1 class="title"><a href="#">间谍 Goodachri</a></h1>
+								<p><span>添加时间：</span><span>2018-09-14</span></p>
+							</div>
+						</div>
+						<div class="films">
+							<div class="img-box">
+								<img src="http://wx4.sinaimg.cn/mw690/80df6fe6gy1fu24e19gypj20ir0rsju0.jpg" />
+								<label>高清中字</label>
+								
+							</div>
+							<div class="film-describe">
+								<h1 class="title"><a href="#">间谍 Goodachri</a></h1>
+								<p><span>添加时间：</span><span>2018-09-14</span></p>
+							</div>
+						</div>
+						<div class="films">
+							<div class="img-box">
+								<img src="http://wx4.sinaimg.cn/mw690/80df6fe6gy1fu24e19gypj20ir0rsju0.jpg" />
+								<label>高清中字</label>
+								
+							</div>
+							<div class="film-describe">
+								<h1 class="title"><a href="#">间谍 Goodachri</a></h1>
+								<p><span>添加时间：</span><span>2018-09-14</span></p>
+							</div>
+						</div>
+						<div class="films">
+							<div class="img-box">
+								<img src="http://wx4.sinaimg.cn/mw690/80df6fe6gy1fu24e19gypj20ir0rsju0.jpg" />
+								<label>高清中字</label>
+								
+							</div>
+							<div class="film-describe">
+								<h1 class="title"><a href="#">间谍 Goodachri</a></h1>
+								<p><span>添加时间：</span><span>2018-09-14</span></p>
+							</div>
+						</div>
+						<div class="films">
+							<div class="img-box">
+								<img src="http://wx4.sinaimg.cn/mw690/80df6fe6gy1fu24e19gypj20ir0rsju0.jpg" />
+								<label>高清中字</label>
+								
+							</div>
+							<div class="film-describe">
+								<h1 class="title"><a href="#">间谍 Goodachri</a></h1>
+								<p><span>添加时间：</span><span>2018-09-14</span></p>
+							</div>
+						</div>
+						<div class="films">
+							<div class="img-box">
+								<img src="http://wx4.sinaimg.cn/mw690/80df6fe6gy1fu24e19gypj20ir0rsju0.jpg" />
+								<label>高清中字</label>
+								
+							</div>
+							<div class="film-describe">
+								<h1 class="title"><a href="#">间谍 Goodachri</a></h1>
+								<p><span>添加时间：</span><span>2018-09-14</span></p>
+							</div>
+						</div>
+						<div class="films">
+							<div class="img-box">
+								<img src="http://wx4.sinaimg.cn/mw690/80df6fe6gy1fu24e19gypj20ir0rsju0.jpg" />
+								<label>高清中字</label>
+								
+							</div>
+							<div class="film-describe">
+								<h1 class="title"><a href="#">间谍 Goodachri</a></h1>
+								<p><span>添加时间：</span><span>2018-09-14</span></p>
+							</div>
+						</div>
+						<div class="films">
+							<div class="img-box">
+								<img src="http://wx4.sinaimg.cn/mw690/80df6fe6gy1fu24e19gypj20ir0rsju0.jpg" />
+								<label>高清中字</label>
+								
+							</div>
+							<div class="film-describe">
+								<h1 class="title"><a href="#">间谍 Goodachri</a></h1>
+								<p><span>添加时间：</span><span>2018-09-14</span></p>
+							</div>
+						</div>
+						<div class="films">
+							<div class="img-box">
+								<img src="http://wx4.sinaimg.cn/mw690/80df6fe6gy1fu24e19gypj20ir0rsju0.jpg" />
+								<label>高清中字</label>
+								
+							</div>
+							<div class="film-describe">
+								<h1 class="title"><a href="#">间谍 Goodachri</a></h1>
+								<p><span>添加时间：</span><span>2018-09-14</span></p>
+							</div>
+						</div>
+						<div class="films">
+							<div class="img-box">
+								<img src="http://wx4.sinaimg.cn/mw690/80df6fe6gy1fu24e19gypj20ir0rsju0.jpg" />
+								<label>高清中字</label>
+								
+							</div>
+							<div class="film-describe">
+								<h1 class="title"><a href="#">间谍 Goodachri</a></h1>
+								<p><span>添加时间：</span><span>2018-09-14</span></p>
+							</div>
+						</div>
+							<div class="films">
+								<div class="img-box">
+									<img src="http://wx4.sinaimg.cn/mw690/80df6fe6gy1fu24e19gypj20ir0rsju0.jpg" />
+									<label>高清中字</label>
+									
+								</div>
+								<div class="film-describe">
+									<h1 class="title"><a href="#">间谍 Goodachri</a></h1>
+									<p><span>添加时间：</span><span>2018-09-14</span></p>
+								</div>
+							</div>
+						
+					</div>
+				</div>	
+				
+				<div class="film-container">
+					<div class="kind-box">
+						<h1>最新剧集：</h1>
+						<a href="#">更多电影>>></a>
+						<div class="clear"></div>
+					</div>
+					<div class="film-box">
+						<div class="films">
+							<div class="img-box">
+								<img src="http://wx4.sinaimg.cn/mw690/80df6fe6gy1fu24e19gypj20ir0rsju0.jpg" />
+								<label>高清中字</label>
+								
+							</div>
+							<div class="film-describe">
+								<h1 class="title"><a href="#">间谍 Goodachri</a></h1>
+								<p><span>添加时间：</span><span>2018-09-14</span></p>
+							</div>
+						</div>
+						<div class="films">
+							<div class="img-box">
+								<img src="http://wx4.sinaimg.cn/mw690/80df6fe6gy1fu24e19gypj20ir0rsju0.jpg" />
+								<label>高清中字</label>
+								
+							</div>
+							<div class="film-describe">
+								<h1 class="title"><a href="#">间谍 Goodachri</a></h1>
+								<p><span>添加时间：</span><span>2018-09-14</span></p>
+							</div>
+						</div>
+						<div class="films">
+							<div class="img-box">
+								<img src="http://wx4.sinaimg.cn/mw690/80df6fe6gy1fu24e19gypj20ir0rsju0.jpg" />
+								<label>高清中字</label>
+								
+							</div>
+							<div class="film-describe">
+								<h1 class="title"><a href="#">间谍 Goodachri</a></h1>
+								<p><span>添加时间：</span><span>2018-09-14</span></p>
+							</div>
+						</div>
+						<div class="films">
+							<div class="img-box">
+								<img src="http://wx4.sinaimg.cn/mw690/80df6fe6gy1fu24e19gypj20ir0rsju0.jpg" />
+								<label>高清中字</label>
+								
+							</div>
+							<div class="film-describe">
+								<h1 class="title"><a href="#">间谍 Goodachri</a></h1>
+								<p><span>添加时间：</span><span>2018-09-14</span></p>
+							</div>
+						</div>
+						<div class="films">
+							<div class="img-box">
+								<img src="http://wx4.sinaimg.cn/mw690/80df6fe6gy1fu24e19gypj20ir0rsju0.jpg" />
+								<label>高清中字</label>
+								
+							</div>
+							<div class="film-describe">
+								<h1 class="title"><a href="#">间谍 Goodachri</a></h1>
+								<p><span>添加时间：</span><span>2018-09-14</span></p>
+							</div>
+						</div>
+						<div class="films">
+							<div class="img-box">
+								<img src="http://wx4.sinaimg.cn/mw690/80df6fe6gy1fu24e19gypj20ir0rsju0.jpg" />
+								<label>高清中字</label>
+								
+							</div>
+							<div class="film-describe">
+								<h1 class="title"><a href="#">间谍 Goodachri</a></h1>
+								<p><span>添加时间：</span><span>2018-09-14</span></p>
+							</div>
+						</div>
+						<div class="films">
+							<div class="img-box">
+								<img src="http://wx4.sinaimg.cn/mw690/80df6fe6gy1fu24e19gypj20ir0rsju0.jpg" />
+								<label>高清中字</label>
+								
+							</div>
+							<div class="film-describe">
+								<h1 class="title"><a href="#">间谍 Goodachri</a></h1>
+								<p><span>添加时间：</span><span>2018-09-14</span></p>
+							</div>
+						</div>
+						<div class="films">
+							<div class="img-box">
+								<img src="http://wx4.sinaimg.cn/mw690/80df6fe6gy1fu24e19gypj20ir0rsju0.jpg" />
+								<label>高清中字</label>
+								
+							</div>
+							<div class="film-describe">
+								<h1 class="title"><a href="#">间谍 Goodachri</a></h1>
+								<p><span>添加时间：</span><span>2018-09-14</span></p>
+							</div>
+						</div>
+						<div class="films">
+							<div class="img-box">
+								<img src="http://wx4.sinaimg.cn/mw690/80df6fe6gy1fu24e19gypj20ir0rsju0.jpg" />
+								<label>高清中字</label>
+								
+							</div>
+							<div class="film-describe">
+								<h1 class="title"><a href="#">间谍 Goodachri</a></h1>
+								<p><span>添加时间：</span><span>2018-09-14</span></p>
+							</div>
+						</div>
+						<div class="films">
+							<div class="img-box">
+								<img src="http://wx4.sinaimg.cn/mw690/80df6fe6gy1fu24e19gypj20ir0rsju0.jpg" />
+								<label>高清中字</label>
+								
+							</div>
+							<div class="film-describe">
+								<h1 class="title"><a href="#">间谍 Goodachri</a></h1>
+								<p><span>添加时间：</span><span>2018-09-14</span></p>
+							</div>
+						</div>
+						<div class="films">
+							<div class="img-box">
+								<img src="http://wx4.sinaimg.cn/mw690/80df6fe6gy1fu24e19gypj20ir0rsju0.jpg" />
+								<label>高清中字</label>
+								
+							</div>
+							<div class="film-describe">
+								<h1 class="title"><a href="#">间谍 Goodachri</a></h1>
+								<p><span>添加时间：</span><span>2018-09-14</span></p>
+							</div>
+						</div>
+						<div class="films">
+							<div class="img-box">
+								<img src="http://wx4.sinaimg.cn/mw690/80df6fe6gy1fu24e19gypj20ir0rsju0.jpg" />
+								<label>高清中字</label>
+								
+							</div>
+							<div class="film-describe">
+								<h1 class="title"><a href="#">间谍 Goodachri</a></h1>
+								<p><span>添加时间：</span><span>2018-09-14</span></p>
+							</div>
+						</div>
+							<div class="films">
+								<div class="img-box">
+									<img src="http://wx4.sinaimg.cn/mw690/80df6fe6gy1fu24e19gypj20ir0rsju0.jpg" />
+									<label>高清中字</label>
+									
+								</div>
+								<div class="film-describe">
+									<h1 class="title"><a href="#">间谍 Goodachri</a></h1>
+									<p><span>添加时间：</span><span>2018-09-14</span></p>
+								</div>
+							</div>
+						
+					</div>
+				</div>	
+				
+				
+				<!--<div style="position: relative;border: solid pink;width: 125px;height: 35px;">
+					<div class="share-box">
+						<span>分享到：<i class="icon-qq"></i> <i class="icon-wb"></i></span>
+					</div>
+				</div>-->
+				
+			</div>
+			<div class="layout-bottom">
+				
+			</div>
+		</div>
+	</body>
+</html>
